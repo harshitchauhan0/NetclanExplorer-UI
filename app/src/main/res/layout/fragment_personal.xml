@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".explore.PersonalFragment">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="15sp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_back"
+                android:gravity="start"
+                android:id="@+id/searchView"
+                android:hint="@string/search"
+                android:padding="10sp"
+                android:drawableStart="@drawable/baseline_search_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="18sp"
+                android:layout_marginStart="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/filterIV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/filterIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/filter"
+                android:layout_marginEnd="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/constraint"
+            android:layout_width="match_parent"
+            android:id="@+id/recyclerView"
+            android:layout_height="match_parent"
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+</layout>
